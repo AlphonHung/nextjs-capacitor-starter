@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import useCurrentUrl from '~/hooks/useCurrentUrl';
+import '~/styles/global.css';
 
 const App = ({ Component, pageProps }: AppProps) => {
     const { domain } = useCurrentUrl();
