@@ -9,7 +9,7 @@ import { PostType } from '~/domain/post.domain';
 const postsDirectory = path.join(process.cwd(), 'posts')
 
 /** 取得排序後的文章列表 */
-export const getSortedPostsData = () => {
+const getSortedPostsData = () => {
     // Get file names under /posts
     const fileNames = fs.readdirSync(postsDirectory)
     const allPostsData = fileNames.map(fileName => {
@@ -34,7 +34,7 @@ export const getSortedPostsData = () => {
 }
 
 /** 取得所有文章id */
-export const getAllPostIds = () => {
+const getAllPostIds = () => {
     const fileNames = fs.readdirSync(postsDirectory)
 
     // 回傳陣列內，每篇文章都需要一個params物件來包住id，這個id與實際顯示文章的[id].tsx對應
@@ -48,7 +48,7 @@ export const getAllPostIds = () => {
 }
 
 /** 透過id取得文章內容 */
-export const getPostData = async (id: string) => {
+const getPostData = async (id: string) => {
     const fullPath = path.join(postsDirectory, `${id}.md`); // 設定路徑
     const fileContents = fs.readFileSync(fullPath, 'utf8'); // 讀取指定路徑文件
 
@@ -67,4 +67,10 @@ export const getPostData = async (id: string) => {
         contentHtml,
         ...matterResult.data
     }
+}
+
+export default {
+    getSortedPostsData,
+    getAllPostIds,
+    getPostData
 }

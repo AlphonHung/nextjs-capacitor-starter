@@ -1,11 +1,9 @@
-import { getAllPostIds, getPostData } from '~/lib/posts';
-import SEOHead from '~/components/SEOHead';
-import Layout from '~/components/Layout';
+import PostsLib from '~/lib/posts.lib';
+import Layout from '~/components/layout/Layout';
 import Date from '~/components/Date';
 
 export default function Post({ postData }) {
-    return <Layout>
-        <SEOHead pageTitle={postData.title} />
+    return <Layout seo={{ pageTitle: postData.title }}>
         {postData.title}
         <br />
         {postData.id}
@@ -17,7 +15,7 @@ export default function Post({ postData }) {
 
 /** 回傳可用的文章id */
 export async function getStaticPaths() {
-    const paths = getAllPostIds(); // 透過lib取得id物件陣列
+    const paths = PostsLib.getAllPostIds(); // 透過lib取得id物件陣列
     return {
         paths,
         fallback: false
@@ -26,7 +24,7 @@ export async function getStaticPaths() {
 
 /** 利用id取得該文章內容 */
 export async function getStaticProps({ params }) {
-    const postData = await getPostData(params.id);
+    const postData = await PostsLib.getPostData(params.id);
     return {
         props: {
             postData

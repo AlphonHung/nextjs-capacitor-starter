@@ -4,7 +4,8 @@ import useCurrentUrl from '~/hooks/useCurrentUrl';
 
 const siteName = `Next.js Starter`;
 
-type SEOHeadProp = {
+/** 單頁SEO設置屬性類型 */
+export type SEOHeadProp = {
     pageTitle: string;
     pageDescription?: string;
     keywords?: string
