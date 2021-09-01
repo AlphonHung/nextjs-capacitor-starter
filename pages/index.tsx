@@ -1,7 +1,21 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { getSortedPostsData } from '~/lib/posts';
+import Date from '~/components/Date';
 
-export default function Home() {
+// Static Generation with data. Get md file data as props.
+export async function getStaticProps() {
+    const allPostsData = getSortedPostsData();
+    return {
+        props: {
+            allPostsData
+        }
+    }
+}
+
+/** Home頁會取得getStaticProps的返回內容(allPostsData) */
+export default function Home({ allPostsData }) {
+    console.log('allPostsData', allPostsData)
     return (
         <div className="container">
             <Head>
@@ -47,6 +61,23 @@ export default function Home() {
                         </p>
                     </a>
                 </div>
+
+                <section>
+                    <h2>Blog</h2>
+                    <ul>
+                        {allPostsData.map(({ id, date, title }) => (
+                            <li key={id}>
+                                <Link href={`/posts/${id}`}>
+                                    <a>{title}</a>
+                                </Link>
+                                <br />
+                                <small>
+                                    <Date dateString={date} />
+                                </small>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
             </main>
 
             <footer>
