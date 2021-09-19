@@ -16,6 +16,7 @@
     "recoil": "^0.4.1",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
+    "sass": "^1.41.1",
     "swr": "^1.0.0"
   },
   "devDependencies": {

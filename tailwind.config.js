@@ -1,3 +1,5 @@
+
+
 module.exports = {
   purge: {
     enabled: true,
@@ -5,7 +7,11 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'float-normal': 'float 3s ease-in-out infinite',
+      }
+    },
   },
   variants: {
     extend: {},

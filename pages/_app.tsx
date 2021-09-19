@@ -5,6 +5,7 @@ import { SWRConfig } from 'swr';
 import { swrConfig } from '~/lib/swr.config';
 import useCurrentUrl from '~/hooks/useCurrentUrl';
 import '~/styles/global.css';
+import '~/styles/shared/animation.scss';
 
 const App = ({ Component, pageProps }: AppProps) => {
     const { domain } = useCurrentUrl();

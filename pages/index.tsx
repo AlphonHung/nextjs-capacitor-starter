@@ -15,7 +15,7 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
     return (
         <Layout seo={{ pageTitle: 'Home' }}>
-            <h1 className="text-6xl hover:underline">Welcome to JAPARI PARK</h1>
+            <h1 className="text-6xl hover:underline animate-float-normal">Welcome to JAPARI PARK</h1>
             <p className="text-2xl">Get started by editing</p>
         </Layout>
     )

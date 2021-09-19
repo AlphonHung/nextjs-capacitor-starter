@@ -6,4 +6,7 @@ module.exports = {
     // instanceId: process.env.INSTANCE_ID,
     // apiEnv: process.env.API_ENV
   },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
 }
