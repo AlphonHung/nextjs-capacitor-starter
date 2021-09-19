@@ -120,7 +120,7 @@ const TodoListFilters = () => {
 const TodoList = () => {
     const todoList = useRecoilValue(filteredTodoListState); // useRecoilValue可直接取得atom狀態值
     return (
-        <Layout seo={{ pageTitle: 'Todo' }}>
+        <Layout header={{ title: 'Todo' }} seo={{ pageTitle: 'Todo' }}>
             <TodoListStats />
             <TodoListFilters />
             <TodoItemCreator />
