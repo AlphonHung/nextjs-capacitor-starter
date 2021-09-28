@@ -1,7 +1,7 @@
 /** 頁面主內容容器 */
 const Main = (props: { children: React.ReactNode }) => {
     return (
-        <main className="py-20 flex flex-col justify-center items-center flex-1">
+        <main className="w-screen h-screen">
             {props.children}
         </main>
     )

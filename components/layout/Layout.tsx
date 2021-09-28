@@ -1,6 +1,5 @@
 import Main from '~/components/layout/Main';
 import Header, { HeaderProp } from '~/components/layout/Header';
-import Footer from '~/components/layout/Footer';
 import SEOHead, { SEOHeadProp } from '~/components/SEOHead';
 
 /** 所有頁面共享排版 */
@@ -12,7 +11,6 @@ const Layout = (props: { children: React.ReactNode, header?: HeaderProp, seo: SE
             <Main>
                 {props.children}
             </Main>
-            <Footer />
         </div>
     )
 }

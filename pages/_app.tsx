@@ -16,9 +16,9 @@ const App = ({ Component, pageProps }: AppProps) => {
                 <Head>
                     {/* SEO & SMO */}
                     {/* viewport for pc */}
-                    <meta name="viewport" content="width=1280, user-scalable=yes" />
+                    {/* <meta name="viewport" content="width=1280, user-scalable=yes" /> */}
                     {/* viewport for mobile */}
-                    {/* <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta> */}
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
                     <meta name="generator" content={domain} />
                     <meta name="author" content={domain} />
                     <meta name="copyright" content={`${new Date().getFullYear()} ${domain}`} />
