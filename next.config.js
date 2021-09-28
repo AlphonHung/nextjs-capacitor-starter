@@ -1,6 +1,7 @@
 const path = require("path")
 
 module.exports = {
+  distDir: 'dist',
   publicRuntimeConfig: {
     env: process.env.NODE_ENV,
     // instanceId: process.env.INSTANCE_ID,
