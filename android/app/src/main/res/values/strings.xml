@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">changwangye</string>
+    <string name="title_activity_main">changwangye</string>
+    <string name="package_name">com.fayaoshanshun.changwangye</string>
+    <string name="custom_url_scheme">com.fayaoshanshun.changwangye</string>
+</resources>
