@@ -10,6 +10,9 @@ module.exports = {
     extend: {
       animation: {
         'float-normal': 'float 3s ease-in-out infinite',
+      },
+      backgroundImage: {
+        'temple': "url('public/images/temple.jpg')",
       }
     },
   },

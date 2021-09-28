@@ -1,22 +1,14 @@
-import PostsLib from '~/lib/posts.lib';
 import Layout from '~/components/layout/Layout';
-
-// Static Generation with data. Get md file data as props.
-export async function getStaticProps() {
-    const allPostsData = PostsLib.getSortedPostsData();
-    return {
-        props: {
-            allPostsData
-        }
-    }
-}
 
 /** Home頁會取得getStaticProps的返回內容(allPostsData) */
 export default function Home({ allPostsData }) {
     return (
         <Layout seo={{ pageTitle: 'Home' }}>
-            <h1 className="text-2xl hover:underline animate-float-normal">Welcome to JAPARI PARK</h1>
-            <p>Get started by editing</p>
+            <div className={`w-full h-full flex flex-col`}>
+                <div className={`w-full h-1/5 flex justify-center items-center bg-gray-400 text-xl`}>誠心祈求後點我求籤</div>
+                <div className={`w-full h-1/5 flex justify-center items-center bg-gray-200 text-xl`}>張王爺求籤簡介</div>
+                <div className={`bg-temple bg-cover flex-1`} />
+            </div>
         </Layout>
     )
 }
