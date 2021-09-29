@@ -31,6 +31,7 @@ const App = ({ Component, pageProps }: AppProps) => {
                     <meta property="og:image:height" content="630" /> */}
                     <meta name="twitter:card" content="summary_large_image" />
                     {/* <meta name="twitter:image" content="/og_img.jpg" /> */}
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
                 </Head>
                 <Component {...pageProps} />
             </RecoilRoot>
